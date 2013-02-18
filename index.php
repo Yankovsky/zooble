@@ -83,7 +83,9 @@
         <script type="text/javascript" src="js/lib/knockout.mapping.js"></script>
 
         <script type="text/javascript" src="js/lib/knockout.extensions.js"></script>
-        <script type="text/javascript" src="js/zooble.js"></script>
+        <script type="text/javascript">
+            var Zooble = {};
+        </script>
         <script type="text/javascript" src="js/util.js"></script>
         <script type="text/javascript" src="js/entity-json-builder.js"></script>
         <script type="text/javascript" src="js/data-provider.js"></script>
