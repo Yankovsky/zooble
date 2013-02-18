@@ -12,18 +12,4 @@ Zooble.Event = function (id, name, creationDate, date, tags, description, partic
     self.prettyEventDate = ko.computed(function () {
         return !self.date() ? null : self.date().toDateString();
     });
-
-    self.isInEditMode = ko.observable(false);
-    self.edit = function () {
-        self.isInEditMode(true);
-    };
-
-    self.save = function () {
-        Zooble.dataProvider.editEvent(self);
-        self.isInEditMode(false);
-    };
-
-    self.cancel = function () {
-        self.isInEditMode(false);
-    };
 };

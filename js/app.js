@@ -27,7 +27,7 @@
             new Event(1, "js hw1", new Date(2013, 1, 9), new Date(2013, 1, 15), ["js", "hw", "events manager", "project"], "make simple events manager", [
                 new Participant("Andrey", "Yankovsky", "Valentinovich", "YankovskyAndrey@gmail.com")
             ]),
-            new Event(2, "next lecture on js", new Date(2013, 1, 10), new Date(2013, 1, 18), ["js", "lecture"], "upcoming lecture", [
+            new Event(2, "next lecture on js", new Date(2013, 1, 10), new Date(2013, 1, 20), ["js", "lecture"], "upcoming lecture", [
                 new Participant("Andrey", "Yankovsky", "Valentinovich", "YankovskyAndrey@gmail.com"),
                 new Participant("Emil", "Lerner", null, "neex.emil@gmail.com"),
                 new Participant("Vitaly", "Glibin", null, "glibin.v@gmail.com")

@@ -37,10 +37,17 @@ Zooble.dataProvider = (function (JSON, localStorage, entityJsonBuilder) {
         },
         saveEvent : function (event) {
             var eventsData = getEvents() || [];
+            var autoIncrement = parseInt(localStorage.getItem(eventsAutoincrementKey)) + 1;
+            event.id = autoIncrement;
+            localStorage.setItem(eventsAutoincrementKey, autoIncrement);
             eventsData.push(ko.mapping.toJS(event));
             saveEvents(eventsData);
         },
         saveEvents : function (events) {
+            var autoIncrement = events.reduce(function(maxId, event) {
+                return event.id > maxId ? event.id : maxId;
+            }, 0);
+            localStorage.setItem(eventsAutoincrementKey, autoIncrement);
             saveEvents(events);
         },
         removeEvent : function (event) {
@@ -48,9 +55,6 @@ Zooble.dataProvider = (function (JSON, localStorage, entityJsonBuilder) {
             var storedEvent = getEvent(eventsData, event);
             ko.utils.arrayRemoveItem(eventsData, storedEvent);
             saveEvents(eventsData);
-        },
-        removeAllEvents : function () {
-            localStorage.removeItem(eventsKey);
         }
     }
 })(JSON, localStorage, Zooble.entityJsonBuilder);
