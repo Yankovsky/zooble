@@ -5,6 +5,11 @@ html, body {
     margin: 0;
 }
 
+body {
+    color: #ffffff;
+    background-color: black;
+}
+
 body * {
     font-family: Segoe UI, monospace;
 }
@@ -28,24 +33,24 @@ body * {
     text-align: center;
     height: 50px;
     line-height: 50px;
-    color: #800080;
+    color: #3c3c3c;
     background-color: #ffffff;
 }
 
 #toolbar .toolbar-clickable:hover {
-    background-color: #800080;
+    background-color: #3c3c3c;
     color: #ffffff;
 }
 
 #toolbar .toolbar-clickable:active {
-    background-color: #a000a0;
+    background-color: #707070;
     color: #ffffff;
 }
 
 .event {
     min-width: 400px;
     min-height: 250px;
-    background: #db7093;
+    background: #3c3c3c;
     float: left;
     margin: 6px;
     padding: 6px;
@@ -88,7 +93,7 @@ body * {
 
 .event .event-tag {
     display: inline-block;
-    background-color: #dddddd;
+    background-color: #5f5f5f;
     padding: 2px;
     margin: 2px;
 }
